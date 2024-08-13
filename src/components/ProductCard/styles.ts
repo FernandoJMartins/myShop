@@ -21,12 +21,13 @@ export const ProductImage = styled.img`
     margin: 0 auto;
 
 
-    object-fit: contain;
+    object-fit: scale-down;
 `
 
 export const ProductTitle = styled.h2`
     font-weight: 500;
     font-size: 1.2rem;
+    max-height: 0.2em;
 
     min-height: 3rem;
 `
@@ -37,7 +38,7 @@ export const ReviewPriceContainer = styled.div`
     align-items: center;
     width: 100%;
 
-    margin-top: 1rem;
+    margin-top: -1em;
 `
 
 export const Review = styled.span`
@@ -80,10 +81,17 @@ export const RemoveToCartButton = styled.button`
     height: 40px;
     width: 100%;
     padding: 0 2rem;
-    background-color: violet;
+    background-color: orange;
     color: black;
 
     display: flex;
     align-items: center;
 `
 
+export const ShoppingCart = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 2rem;
+    color: white;
+`

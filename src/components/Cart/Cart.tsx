@@ -16,8 +16,8 @@ export const Cart: React.FC<CartProps> = ({
 
     return (
         <S.Container showCart={showCart}>
-            <S.Title>Carrinho</S.Title>
-
+            <S.Title>Cart</S.Title>
+            <hr></hr>
             <S.CartProductList>
                 {cart.map((product) => (
                     <S.CartProductItem key={product.id}><strong>{product.title}</strong> - {product.price} R$</S.CartProductItem>

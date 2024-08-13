@@ -9,12 +9,11 @@ export const Container = styled.aside<ContainerProps>`
     position: fixed;
     top: 0;
     right: ${(props) => props.showCart ? '0' : '-500px'};
-
     transition: 0.5s;
 
     width: 500px;
     background-color: white;
-    height: 100vh;
+    height: 50vh;
     padding: 2rem;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
 `;
@@ -22,7 +21,7 @@ export const Container = styled.aside<ContainerProps>`
 export const Title = styled.h1``;
 
 export const CartProductList = styled.ul`
-    padding: 2rem 0;
+    padding: 1rem 0;
     list-style: none;
 
     display: flex;

@@ -1,3 +1,4 @@
+import { GiShoppingCart } from 'react-icons/gi';
 import styled from 'styled-components';
 
 
@@ -8,7 +9,18 @@ export const StyledHeader = styled.header`
 `;
 
 export const HeaderTitle = styled.h1`
-    color: white`;
+    color: white;
+    margin: 0.1em 1em`;
+    
+export const SearchBar = styled.input`
+    padding: 0 2rem;
+    margin: 1em 1em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    width: 400px;
+`;
 
 
 interface AuthButtonProps {
@@ -22,21 +34,29 @@ export const AuthButton = styled.button<AuthButtonProps>`
     padding: 0 2rem;
     background-color: ${(props) => props.isLogged ? 'red' : 'green'};
     color: white;
-
+    margin: 1em 1em;
     display: flex;
     align-items: center;
-
-
 `;
+
+export const LogButton = styled.button`
+    border: none;
+    height: 30px;
+    margin: 0 0.5em;
+    background-color: white;
+    color: white;
+    display: flex;
+    align-items: center;
+    `;
 
 export const CartButton = styled.button`
     border: none;
     border-radius: 5px;
     height: 30px;
     padding: 0 2rem;
-    background-color: violet;
+    margin: 1em 1em;
+    background-color: white;
     color: black;
-
     display: flex;
     align-items: center;
     `;
@@ -56,4 +76,13 @@ export const ButtonsWrapper = styled.div`
     display: flex;
     
     
+    `;
+
+
+export const ShoppingCart = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5em;
+    color: white;
     `;
