@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
     background-color: navy;
+    color: white;
+    padding: 20px;
+    
 
 
 `;
@@ -20,6 +23,7 @@ export const SearchBar = styled.input`
     border: none;
     border-radius: 5px;
     width: 400px;
+    
 `;
 
 
@@ -37,6 +41,9 @@ export const AuthButton = styled.button<AuthButtonProps>`
     margin: 1em 1em;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 7.5rem;
+    max-width:7.5rem;
 `;
 
 export const LogButton = styled.button`
@@ -47,6 +54,7 @@ export const LogButton = styled.button`
     color: white;
     display: flex;
     align-items: center;
+    justify-content: center;
     `;
 
 export const CartButton = styled.button`
@@ -59,6 +67,7 @@ export const CartButton = styled.button`
     color: black;
     display: flex;
     align-items: center;
+    width: 7.5rem;
     `;
 
 export const Wrapper = styled.div`

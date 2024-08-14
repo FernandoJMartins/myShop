@@ -9,7 +9,7 @@ describe('Cart > Unit tests', () => {
     it('should render an empty cart', () => {
         render(
         <Provider store={store}>
-            <Cart showCart={true}/>
+            <Cart showCart={true} setShowCart={() => {}}/>
         </Provider>
     );
     })

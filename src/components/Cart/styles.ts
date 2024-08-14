@@ -11,9 +11,9 @@ export const Container = styled.aside<ContainerProps>`
     right: ${(props) => props.showCart ? '0' : '-500px'};
     transition: 0.5s;
 
-    width: 500px;
+    width: 350px;
     background-color: white;
-    height: 50vh;
+    height: 100vh;
     padding: 2rem;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.25);
 `;
@@ -33,3 +33,9 @@ export const CartProductItem = styled.li``;
 
 
 export const CartTotal = styled.strong``;
+
+export const CloseButton = styled.div`
+    display:flex;
+    justify-content: space-between;
+    color: black;
+`;
