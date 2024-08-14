@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const StyledHeader = styled.header`
     background-color: navy;
     color: white;
-    padding: 20px;
+    padding: 10px;
     
 
 
@@ -42,8 +42,8 @@ export const AuthButton = styled.button<AuthButtonProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 7.5rem;
-    max-width:7.5rem;
+    width: 8rem;
+    max-width:8rem;
 `;
 
 export const LogButton = styled.button`

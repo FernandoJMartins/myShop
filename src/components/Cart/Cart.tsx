@@ -15,6 +15,7 @@ export const Cart: React.FC<CartProps> = ({
 }) => {
 
     // const [showCart, setShowCart] = useState(initialShowCart);
+    
     const { cart } = useSelector((rootReducer: RootReducer) => rootReducer.cartReducer)
     const total = cart.reduce((totalCart, product) => { return totalCart + product.price}, 0);
 
@@ -22,7 +23,7 @@ export const Cart: React.FC<CartProps> = ({
         <S.Container showCart={showCart}>
             <S.CloseButton >
                 <S.Title>Cart</S.Title>
-                <FaTimes onClick={() => setShowCart(false)} size={20} color="black"/>
+                <FaTimes onClick={() => setShowCart(false)} size={20} color="black" className='s'/>
             </S.CloseButton>
             <hr></hr>
             <S.CartProductList>
