@@ -49,7 +49,7 @@ export const Cart: React.FC<CartProps> = ({
             <hr></hr>
             <S.CartProductList>
                 {cart.map((product) => (
-                    <S.CartProductItem key={product.id}>
+                    <S.CartProductItem style={{fontSize: '13px'}} key={product.id}>
                         <strong>{product.title}</strong> - {product.price} R$
                         <i style={{margin: '10px'}}onClick={() => handleRemoveClick(product)}><FaTrash />
                         </i>
@@ -57,7 +57,7 @@ export const Cart: React.FC<CartProps> = ({
                     </S.CartProductItem>
                 ))}
             </S.CartProductList>
-            <S.CartTotal> Total: {total} R$</S.CartTotal>
+            <S.CartTotal> Total: {total.toFixed(2)} R$</S.CartTotal>
             {showModal && (
                 <S.Modal>
                     <S.ModalContent>
