@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
 	const dispatch = useDispatch();
 	const { user } = useSelector(
 		(rootReducer: RootReducer) => rootReducer.userReducer);
+    const { cart } = useSelector((rootReducer: RootReducer) => rootReducer.cartReducer)
 	const isLogged = user !== null;
 	const [showCart, setShowCart] = useState(false);
 
@@ -63,14 +64,36 @@ export const Header: React.FC = () => {
 
 					{/* </S.LogButton> */}
 				</S.AuthButton>
+                <S.CartStyle>
 				<S.CartButton onClick={() => setShowCart(!showCart)}>Cart
-					
+
 					<S.ShoppingCart><CgShoppingCart/></S.ShoppingCart>
+
 				</S.CartButton>
+                {cart.length > 0 &&
+                <span style={{
+                background: 'red',
+                width: '15px',
+                height: '15px',
+                position: 'absolute',
+                top: 8,
+                left: 8,
+                color:'white',
+                fontSize: '12px',
+                borderRadius:'15px',
+                display:'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}>{cart.length}</span>}
+        </S.CartStyle>
 			</S.ButtonsWrapper>
 			
         </S.Wrapper>
-		<Cart showCart={showCart} setShowCart={setShowCart}/>
+        
+
+		    <Cart showCart={showCart} setShowCart={setShowCart}/>
+
+        
 		<nav style={{
             marginLeft: '-45rem',
             display: 'flex',

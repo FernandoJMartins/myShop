@@ -97,7 +97,9 @@ export const Cart: React.FC<CartProps> = ({
                     </S.ModalContent>
                 </S.Modal>
             )}
+            
         {showRemoveFromCartMessage && <S.MessageRemoved>Product removed from cart!</S.MessageRemoved>}
+        
 
         </S.Container > 
     )

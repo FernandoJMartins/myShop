@@ -6,8 +6,6 @@ export const StyledHeader = styled.header`
     background-color: navy;
     color: white;
     padding: 10px;
-    
-
 
 `;
 
@@ -95,3 +93,11 @@ export const ShoppingCart = styled.div`
     margin: 0 0.5em;
     color: white;
     `;
+
+export const CartStyle = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+`
