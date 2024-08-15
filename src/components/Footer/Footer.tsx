@@ -1,8 +1,20 @@
-import { FaInstagram, FaInstagramSquare } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Footer.css';
+import React, { useState } from 'react';
+import * as S from './styles';
 
 export const Footer: React.FC = () => {
+
+    const [showSubmited, setShowSubmited] = useState(false);
+
+    function submitMessage(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setShowSubmited(true);
+        setTimeout(() => {
+            setShowSubmited(false);
+        }, 3000);
+    };
+
+
     return (
         <footer className="footer">
             <div className="footer-section">
@@ -24,7 +36,7 @@ export const Footer: React.FC = () => {
                         <li><a href="#">FAQ</a></li>
                     </ul>
                 </div>
-                <form className="footer-form">
+                <form className="footer-form" onSubmit={submitMessage}>
                     <h3>Contact us!</h3>
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" name="name" />
@@ -34,6 +46,7 @@ export const Footer: React.FC = () => {
                 </form>
             </div>
             <p>All Rights Reserved. &copy; 2024</p>
+            {showSubmited && <S.Message>Message Sended!</S.Message>}
         </footer>
     );
 }
